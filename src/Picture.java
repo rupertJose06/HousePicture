@@ -3,7 +3,9 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Square background;
     private boolean drawn;
+
 
     /**
      * Constructor for objects of class Picture
@@ -13,6 +15,7 @@ public class Picture {
         window = new Square();
         roof = new Triangle();
         sun = new Circle();
+        background = new Square();
         drawn = false;
     }
 
@@ -26,6 +29,12 @@ public class Picture {
      */
     public void draw() {
         if(!drawn) {
+            background.changeColor("blue");
+            background.moveHorizontal(-350);
+            background.moveVertical(-200);
+            background.changeSize(5000);
+            background.makeVisible();
+
             wall.moveHorizontal(-140);
             wall.moveVertical(60);
             wall.changeSize(120);
@@ -47,6 +56,7 @@ public class Picture {
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+
             drawn = true;
         }
     }
@@ -59,6 +69,7 @@ public class Picture {
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
+        background.changeColor("blue");
     }
 
     /**
@@ -69,5 +80,6 @@ public class Picture {
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
+        background.changeColor("blue");
     }
 }
