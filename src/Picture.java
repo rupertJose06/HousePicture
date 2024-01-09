@@ -1,5 +1,4 @@
-public class Picture
-{
+public class Picture {
     private Square wall;
     private Square window;
     private Triangle roof;
@@ -9,8 +8,7 @@ public class Picture
     /**
      * Constructor for objects of class Picture
      */
-    public Picture()
-    {
+    public Picture() {
         wall = new Square();
         window = new Square();
         roof = new Triangle();
@@ -26,8 +24,7 @@ public class Picture
     /**
      * Draw this picture.
      */
-    public void draw()
-    {
+    public void draw() {
         if(!drawn) {
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
@@ -57,8 +54,7 @@ public class Picture
     /**
      * Change this picture to black/white display
      */
-    public void setBlackAndWhite()
-    {
+    public void setBlackAndWhite() {
         wall.changeColor("black");
         window.changeColor("white");
         roof.changeColor("black");
@@ -68,8 +64,7 @@ public class Picture
     /**
      * Change this picture to use color display
      */
-    public void setColor()
-    {
+    public void setColor() {
         wall.changeColor("red");
         window.changeColor("black");
         roof.changeColor("green");
