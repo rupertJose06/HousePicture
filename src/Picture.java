@@ -1,4 +1,5 @@
 public class Picture {
+    private Square grass;
     private Square wall;
     private Square window;
     private Triangle roof;
@@ -35,9 +36,31 @@ public class Picture {
             background.changeSize(5000);
             background.makeVisible();
 
+            Square grass = new Square();
+            grass.changeColor("green");
+            grass.moveHorizontal(-350);
+            grass.moveVertical(125);
+            grass.changeSize(5000);
+            grass.makeVisible();
+
+            Triangle roof = new Triangle();
+            roof.changeColor("lightgray");
+            roof.moveHorizontal(0);
+            roof.moveVertical(0);
+            roof.changeSize(50, 100);
+            roof.makeVisible();
+/*
+            Triangle roof2 = new Triangle();
+            roof2.changeColor("gray");
+            roof2.moveHorizontal(-350);
+            roof2.moveVertical(125);
+            roof2.changeSize(50, 100);
+            roof2.makeVisible();
+*/
+
             wall.moveHorizontal(-140);
             wall.moveVertical(60);
-            wall.changeSize(120);
+            wall.changeSize(400);
             wall.makeVisible();
 
             window.changeColor("black");
@@ -50,12 +73,6 @@ public class Picture {
             roof.moveHorizontal(20);
             roof.moveVertical(-60);
             roof.makeVisible();
-
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
 
             drawn = true;
         }
