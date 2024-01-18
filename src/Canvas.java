@@ -108,7 +108,6 @@ public class Canvas
 
     /**
      * Set the foreground color of the Canvas.
-     * @param  newColor   the new color for the foreground of the Canvas
      */
     public void setForegroundColor(String colorString)
     {
@@ -131,16 +130,40 @@ public class Canvas
             graphic.setColor(Color.magenta);
         }
         else if(colorString.equals("white")) {
-            graphic.setColor(Color.white);
-        }
-        else if(colorString.equals("white")) {
             graphic.setColor(new Color(242, 245, 244));
         }
         else if(colorString.equals("brown")) {
             graphic.setColor(new Color(97, 59, 54));
         }
+        else if(colorString.equals("driveway")) {
+            graphic.setColor(new Color(230, 229, 229));
+        }
+        else if(colorString.equals("triangleroof")) {
+            graphic.setColor(new Color(247, 247, 247));
+        }
+        else if(colorString.equals("verylightgray")) {
+            graphic.setColor(new Color(242, 242, 242));
+        }
         else if(colorString.equals("lightgray")) {
             graphic.setColor(new Color(227, 227, 227));
+        }
+        else if(colorString.equals("kindaWhite")) {
+            graphic.setColor(new Color(249, 249, 249));
+        }
+        else if(colorString.equals("windows")) {
+            graphic.setColor(new Color(226, 226, 226));
+        }
+        else if(colorString.equals("doorwindow")) {
+            graphic.setColor(new Color(226, 226, 226));
+        }
+        else if(colorString.equals("doorstep")) {
+            graphic.setColor(new Color(91, 91, 91));
+        }
+        else if(colorString.equals("doorPillar")) {
+            graphic.setColor(new Color(165, 132, 106));
+        }
+        else if(colorString.equals("roofwindowframe")) {
+            graphic.setColor(new Color(15, 15, 15));
         }
         else {
             graphic.setColor(Color.black);
