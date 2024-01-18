@@ -1,6 +1,7 @@
 import java.awt.*;
 
-public class Triangle {
+public class Triangle
+{
     private int height;
     private int width;
     private int xPosition;
@@ -11,7 +12,8 @@ public class Triangle {
     /**
      * Create a new triangle at default position with default color.
      */
-    public Triangle() {
+    public Triangle()
+    {
         height = 60;
         width = 70;
         xPosition = 210;
@@ -23,7 +25,8 @@ public class Triangle {
     /**
      * Make this triangle visible. If it was already visible, do nothing.
      */
-    public void makeVisible() {
+    public void makeVisible()
+    {
         isVisible = true;
         draw();
     }
@@ -31,7 +34,8 @@ public class Triangle {
     /**
      * Make this triangle invisible. If it was already invisible, do nothing.
      */
-    public void makeInvisible() {
+    public void makeInvisible()
+    {
         erase();
         isVisible = false;
     }
@@ -39,35 +43,40 @@ public class Triangle {
     /**
      * Move the triangle a few pixels to the right.
      */
-    public void moveRight() {
+    public void moveRight()
+    {
         moveHorizontal(20);
     }
 
     /**
      * Move the triangle a few pixels to the left.
      */
-    public void moveLeft() {
+    public void moveLeft()
+    {
         moveHorizontal(-20);
     }
 
     /**
      * Move the triangle a few pixels up.
      */
-    public void moveUp() {
+    public void moveUp()
+    {
         moveVertical(-20);
     }
 
     /**
      * Move the triangle a few pixels down.
      */
-    public void moveDown() {
+    public void moveDown()
+    {
         moveVertical(20);
     }
 
     /**
      * Move the triangle horizontally by 'distance' pixels.
      */
-    public void moveHorizontal(int distance) {
+    public void moveHorizontal(int distance)
+    {
         erase();
         xPosition += distance;
         draw();
@@ -76,7 +85,8 @@ public class Triangle {
     /**
      * Move the triangle vertically by 'distance' pixels.
      */
-    public void moveVertical(int distance) {
+    public void moveVertical(int distance)
+    {
         erase();
         yPosition += distance;
         draw();
@@ -85,7 +95,8 @@ public class Triangle {
     /**
      * Slowly move the triangle horizontally by 'distance' pixels.
      */
-    public void slowMoveHorizontal(int distance) {
+    public void slowMoveHorizontal(int distance)
+    {
         int delta;
 
         if(distance < 0)
@@ -108,7 +119,8 @@ public class Triangle {
     /**
      * Slowly move the triangle vertically by 'distance' pixels.
      */
-    public void slowMoveVertical(int distance) {
+    public void slowMoveVertical(int distance)
+    {
         int delta;
 
         if(distance < 0)
@@ -131,7 +143,8 @@ public class Triangle {
     /**
      * Change the size to the new size (in pixels). Size must be >= 0.
      */
-    public void changeSize(int newHeight, int newWidth) {
+    public void changeSize(int newHeight, int newWidth)
+    {
         erase();
         height = newHeight;
         width = newWidth;
@@ -142,7 +155,8 @@ public class Triangle {
      * Change the color. Valid colors are "red", "yellow", "blue", "green",
      * "magenta" and "black".
      */
-    public void changeColor(String newColor) {
+    public void changeColor(String newColor)
+    {
         color = newColor;
         draw();
     }
@@ -150,7 +164,8 @@ public class Triangle {
     /**
      * Draw the triangle with current specifications on screen.
      */
-    private void draw() {
+    private void draw()
+    {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
             int[] xpoints = { xPosition, xPosition + (width/2), xPosition - (width/2) };
@@ -163,7 +178,8 @@ public class Triangle {
     /**
      * Erase the triangle on screen.
      */
-    private void erase() {
+    private void erase()
+    {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
